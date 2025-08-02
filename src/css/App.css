@@ -1,0 +1,16 @@
+*{
+  margin: 0;
+  padding: 0;
+  border: border-box;
+}
+html{
+  overflow-x: hidden;
+}
+body {
+  background: linear-gradient(90deg, #18133d 0%, #171435 50%, #101028 100%);
+  color: white;
+}
+.Main-Body-Container{
+  margin-left: 30px;
+  margin-right: 30px;
+}

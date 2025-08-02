@@ -1,0 +1,69 @@
+.glow-butt {
+    width: 250px;
+    background: transparent;
+    border: none;
+    color: inherit;
+    padding: 30px 30px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.selected {
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 15px rgba(163, 113, 247, 0.3);
+    border: 1px solid rgba(163, 113, 247, 0.4);
+    background: rgba(255, 255, 255, 0.16);
+    box-shadow: 0 0 25px rgba(163, 113, 247, 0.6);
+    transform: scale(1.05);
+}
+.glow-butt:hover{
+    background: rgba(255, 255, 255, 0.08);
+    transform: scale(1.05);
+}
+
+.g-button {
+    padding: 2%;
+    display: flex;
+    justify-content:space-around;
+    background: rgba(255, 255, 255, 0.009);
+    border: 1px solid rgba(163, 113, 247, 0.4);
+    color: inherit;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 15px rgba(163, 113, 247, 0.3);
+}
+
+.topBar{
+    margin-top: 20px;
+    width: 900px;
+}
+.Title{
+    background: #8B5CF6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #A855F7, #3B82F6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #A855F7, #3B82F6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-weight: bolder;
+}
+.Title-Container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8%;
+}
+.Title-Container span,.Title-Container p{
+    margin: 8px;
+    max-width: 600px;
+    text-align: center;
+}
+.Bellow-TopBar{
+    margin-top: 5%;
+}
+.Showcase-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

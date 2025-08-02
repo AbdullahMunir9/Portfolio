@@ -1,0 +1,76 @@
+.Home-container{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+}
+
+.LeftBar{
+    max-width:750px;
+    margin-left: 45px;
+}
+.RightBar{
+    margin-right: 50px;
+}
+
+.Title-Text {
+    font-size: 85px;
+    font-weight: bold;
+    background: linear-gradient(to right, #1D2671, #C33764);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+span{
+    font-size: 60px;
+}
+.social-links{
+    display: flex;
+    max-width: 200px;
+    justify-content: space-around;
+    margin-top: 3%;
+}
+
+
+/* Buttons */
+
+.glowing-button {
+    margin-right: 19px;
+    margin-top: 25px;
+
+    background: rgba(255, 255, 255, 0.009);
+    border: 1px solid rgba(163, 113, 247, 0.4);
+    color: inherit;
+    padding: 10px 20px;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 15px rgba(163, 113, 247, 0.3);
+    transition: all 0.3s ease;
+}
+.glowing-button:hover {
+    box-shadow: 0 0 25px rgba(163, 113, 247, 0.6);
+    transform: scale(1.05);
+}
+.subTitle-Text{
+    margin-top: 25px;
+}
+.bg-black{
+    margin-top: 35px;
+    background: black;
+    color: white;
+}
+.contact-Container{
+    display: flex;
+    justify-content: center;
+    max-width: 400px;
+    align-items: center;
+}
+.contact-Container button{
+    padding: 20px;
+    width: 280px;
+    cursor: pointer;
+}
+.icons{
+    position: relative;
+    top: 3px;
+}

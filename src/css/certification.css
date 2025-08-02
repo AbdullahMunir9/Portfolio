@@ -1,0 +1,24 @@
+.certificate-img{
+    border: 10px solid rgb(41, 39, 54);
+    height: 350px;
+    width: 450px;
+    margin-top: 1%;
+    margin-left: 10%;
+}
+
+.certification-Container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.certification-Container button{
+    cursor: pointer;
+    padding: 1%;
+}
+.Button-Contain{
+    margin: 0;
+    width: 100%;
+    position: relative;
+    left: 10%;
+    
+}
