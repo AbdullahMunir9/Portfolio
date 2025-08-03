@@ -3,9 +3,11 @@
     display: inline;
     font-size: larger;
 }
-.NavBar-ListItems-container a{
-    text-decoration: none;
+.NavBar-ListItems-container button{
+    background: transparent;
+    border: none;
     color: inherit;
+    cursor: pointer;
 }
 .NavBar-ListItems-container{
     display: flex;
