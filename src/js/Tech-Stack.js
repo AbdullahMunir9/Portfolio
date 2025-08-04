@@ -107,7 +107,7 @@ function Marquee({
   );
 }
 
-function TechStackMarquee() {
+function TechStackMarquee({direction}) {
   const technologies = [
     { icon: FaHtml5, name: "HTML5", color: "#E34F26" },
     { icon: FaCss3Alt, name: "CSS3", color: "#1572B6" },
@@ -127,15 +127,11 @@ function TechStackMarquee() {
       <div className="tech-stack-background"></div>
       
       <div className="tech-stack-content">
-        <div className="tech-stack-header">
-          <h2 className="tech-stack-title">Tech Stack</h2>
-          <p className="tech-stack-subtitle">Technologies I work with</p>
-        </div>
-        
         <Marquee 
-          speed={30} 
+          speed={60} 
           className="tech-marquee"
           pauseOnHover={true}
+          reverse = {direction}
         >
           {technologies.map((tech, index) => (
             <TechBlock
@@ -156,8 +152,8 @@ function TechStackMarquee() {
           width: 100%;
           position: relative;
           background: transparent;
-          min-height: 300px;
           overflow: hidden;
+          max-height: 200px;
         }
 
         .tech-stack-background {
@@ -178,24 +174,6 @@ function TechStackMarquee() {
         .tech-stack-content {
           position: relative;
           z-index: 2;
-        }
-
-        .tech-stack-header {
-          text-align: center;
-          padding: 2rem 0;
-        }
-
-        .tech-stack-title {
-          font-size: 2.5rem;
-          font-weight: bold;
-          color: white;
-          margin-bottom: 0.5rem;
-          text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .tech-stack-subtitle {
-          color: rgba(255,255,255,0.9);
-          font-size: 1.1rem;
         }
 
         .marquee-container {

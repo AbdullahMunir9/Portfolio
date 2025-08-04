@@ -4,6 +4,13 @@ import { FileDown } from 'lucide-react';
 import { Code2 } from "lucide-react";
 
 function About() {
+    function scroll() {
+        window.scrollTo({
+            top: 1844.444580078125,
+            behavior: 'smooth'
+        });
+    }
+
     const stats = [
         {
         icon: Code,
@@ -61,10 +68,10 @@ function About() {
                             <FileDown className="icon" size={20} style={{ marginRight: '8px' }} />
                             Download CV
                         </a>
-                        <a className="glowing-button" href="/Abdullah Munir (Resume).pdf" download>   
+                        <button className="glowing-button Projects" onClick={scroll}>   
                             <Code2 className="icon" size={20} style={{ marginRight: '8px' }} />
                             View Projects
-                        </a>
+                        </button>
                     </div>
                 </div>
             </div>

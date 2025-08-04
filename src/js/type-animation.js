@@ -3,7 +3,7 @@ import { TypeAnimation } from 'react-type-animation';
 const TypingAnimation = () => {
   return (
     <>
-        <span>I'm a </span>
+        <span>I'm </span>
         <TypeAnimation
         sequence={[
             'React Wizard',

@@ -16,37 +16,40 @@ function toggle(event) {
     }
 }
 
-function scroll(event) {
-    const class_Name = event.currentTarget.className
 
-    if (class_Name === 'Home') {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    }
-    else if(class_Name === 'About'){
-        window.scrollTo({
-            top: 691.1111450195312,
-            behavior: 'smooth'
-        });
-    }
-    else if(class_Name === 'Projects'){
-        window.scrollTo({
-            top: 1844.444580078125,
-            behavior: 'smooth'
-        });
-    }
-    else{
-        window.scrollTo({
-            top: 3220.000244140625,
-            behavior: 'smooth'
-        });
-    }
-}
 
 // Bellow is the Main Component of NavBar
 function NavBar(){
+    const [selectedIndex,setSelectedIndex] = React.useState(0)
+    const buttons = ["Home","About","Projects","Contact"]
+
+    function scroll(index) {
+        if (index === 0) {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+        else if(index === 1){
+            window.scrollTo({
+                top: 680.1111450195312,
+                behavior: 'smooth'
+            });
+        }
+        else if(index === 2){
+            window.scrollTo({
+                top: 1844.444580078125,
+                behavior: 'smooth'
+            });
+        }
+        else{
+            window.scrollTo({
+                top: 2834.81494140625,
+                behavior: 'smooth'
+            });
+        }
+    }
+
     const navBarRef = React.useRef(null);
     const [isScrolled, setIsScrolled] = React.useState(false);
 
@@ -73,18 +76,22 @@ function NavBar(){
                     size={33} strokeWidth={1.5} 
                 />
                 <div className="NavBar-ListItems-container">
-                        <button onClick={scroll} className='Home'>
-                            <li>Home</li>
-                        </button>
-                        <button onClick={scroll} className='About'>
-                            <li>About</li>
-                        </button>
-                        <button onClick={scroll} className='Projects'>
-                            <li>Projects</li>
-                        </button>
-                        <button onClick={scroll} className='Contact'>
-                            <li>Contact</li>
-                        </button>
+                    {
+                        buttons.map((data,index)=>{
+                            return (
+                                <button 
+                                    onClick={()=>{
+                                        scroll(index);
+                                        setSelectedIndex(index)
+                                    }} 
+                                    className={`${data} ${selectedIndex === index ? 'style-text' : ''}`}
+                                    key={index}
+                                >
+                                    <li>{data}</li>
+                                </button>
+                            )
+                        })
+                    }
                 </div>
                 <div className='darkmode'>
                     <i onClick={toggle} className="bi bi-moon-fill"></i>

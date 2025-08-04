@@ -1,13 +1,14 @@
 import Project from './projects'
 import TechStack from './Tech-Stack'
 import Certification from './certification'
+import '../css/tech-Stack.css'
 import React from 'react'
 
 function PortfolioShowcase() {
     const [selectedIndex,setSelectedIndex] = React.useState(0)
     const button = ["Projects","Tech Stack","Certifications"]
     return(
-        <div className='Showcase-container'>
+        <div id='Projects' className='Showcase-container'>
 
             <div className="Title-Container">
                 <span className="Title">Portfolio Showcase</span>
@@ -33,8 +34,15 @@ function PortfolioShowcase() {
 
 
             <div className='Bellow-TopBar'>
-                {selectedIndex === 0 && <Project />}
-                {selectedIndex === 1 && <TechStack />}
+                {selectedIndex === 0 && <Project/>}
+                {selectedIndex === 1 && <TechStack/>}
+                {selectedIndex === 1 && 
+                    <div className="tech-stack-header">
+                        <h2 className="tech-stack-title">Tech Stack</h2>
+                        <p className="tech-stack-subtitle">Technologies I work with</p>
+                    </div>
+                }   
+                {selectedIndex === 1 && <TechStack direction = "true"/>}
                 {selectedIndex === 2 && <Certification />}
             </div>
         </div>

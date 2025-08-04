@@ -75,10 +75,14 @@ img{
 .Button-Container a{
     text-decoration: none;
     padding: 5%;
+    cursor: pointer;
 }
 .icon{
     position: relative;
     top: 4px;
+}
+.Projects{
+    cursor: pointer;
 }
 
 

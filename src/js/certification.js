@@ -9,6 +9,13 @@ function Certification() {
         '/certifications/img4.png',
         '/certifications/img5.png'
     ];
+    const certificates = [
+        '/Certificates/Capstone.pdf',
+        '/Certificates/CSS.pdf',
+        '/Certificates/HTML.pdf',
+        '/Certificates/Java Script.pdf',
+        '/Certificates/Respositivity.pdf'
+    ];
 
     const initialVisibleCount = 4
     const [visibleItemsCount, setVisibleItemsCount] = React.useState(initialVisibleCount);
@@ -27,7 +34,11 @@ function Certification() {
             <div className="img-container">
                 {
                     images.slice(0,visibleItemsCount).map((img,index)=>{
-                        return <img key={index} className="certificate-img" src={img} alt="Certification Images" />
+                        return (
+                            <a href={certificates[index]}>
+                                <img key={index} className="certificate-img" src={img} alt="Certification Images" />
+                            </a>
+                        )
                     })
                 }
             </div>

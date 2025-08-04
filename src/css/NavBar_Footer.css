@@ -8,6 +8,22 @@
     border: none;
     color: inherit;
     cursor: pointer;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+
+}
+.NavBar-ListItems-container button:hover{
+    background: #8B5CF6;
+    background: -webkit-linear-gradient(to right, #A855F7, #3B82F6);
+    background: linear-gradient(to right, #A855F7, #3B82F6);
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    border: 1px solid snow;
+    border-radius: 10px;
 }
 .NavBar-ListItems-container{
     display: flex;
@@ -101,10 +117,22 @@
   position: relative; 
   z-index: 6; 
 }
+
 footer{
   display: flex;
   justify-content: center;
   padding: 1%;
   background: transparent;
   border-top: 0.3px solid rgba(255, 255, 255, 0.2);
+}
+
+
+.style-text{
+    background: #8B5CF6 !important;
+    background: -webkit-linear-gradient(to right, #A855F7, #3B82F6) !important;
+    background: linear-gradient(to right, #A855F7, #3B82F6) !important;
+    -webkit-text-fill-color: transparent !important;
+    color: transparent !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
 }
