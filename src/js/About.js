@@ -2,6 +2,8 @@ import { Code, Award, Globe } from "lucide-react";
 import profilePic from '../assets/profile-pic.png'
 import { FileDown } from 'lucide-react';
 import { Code2 } from "lucide-react";
+import { Element } from 'react-scroll';
+
 
 function About() {
     function scroll() {
@@ -33,9 +35,7 @@ function About() {
     ];
     return(
         <div className="About-container">
-            
-            <div className='Title-Container'><span className='Aboutme-Title'>About Me</span></div>
-            
+            <Element name="About"><div className='Title-Container'><span className='Aboutme-Title'>About Me</span></div></Element>
             <div className='Info-Container'>
                 <div className="glass-card">
                     <div className="leftbar">

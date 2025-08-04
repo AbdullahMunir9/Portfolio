@@ -3,19 +3,20 @@ import TechStack from './Tech-Stack'
 import Certification from './certification'
 import '../css/tech-Stack.css'
 import React from 'react'
+import { Element } from 'react-scroll';
 
 function PortfolioShowcase() {
     const [selectedIndex,setSelectedIndex] = React.useState(0)
     const button = ["Projects","Tech Stack","Certifications"]
     return(
         <div id='Projects' className='Showcase-container'>
-
-            <div className="Title-Container">
-                <span className="Title">Portfolio Showcase</span>
-                <p>Explore my journey through projects, certifications, and technical expertise. Each section represents a milestone in my continuous learning path.</p>
-            </div>
-
-
+            <Element name="Projects">
+                <div className="Title-Container">
+                    <span className="Title">Portfolio Showcase</span>
+                    <p>Explore my journey through projects, certifications, and technical expertise. Each section represents a milestone in my continuous learning path.</p>
+                </div>
+            </Element>
+            
             <div className="topBar g-button">
                 {
                     button.map((B,index)=>{

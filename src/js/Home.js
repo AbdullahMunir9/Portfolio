@@ -3,16 +3,18 @@ import myAnimation from "../assets/about-animation.json";
 import TypeAnimation from './type-animation';
 import { ExternalLink, Mail } from 'lucide-react';
 import { Github, Linkedin, Instagram } from 'lucide-react';
+import { Element } from 'react-scroll';
 
 function Home(params) {
     const languages = ["Javascript","React","ExpressJs","Node.Js","Tailwind"]
     return(
         <div className="Home-container">
             <div className="LeftBar">
-
-                <div>
-                    <p className="Title-Text">Software Engineer</p>
-                </div>
+                <Element name="Home">
+                    <div>
+                        <p className="Title-Text">Software Engineer</p>
+                    </div>
+                </Element>
                 
                 <TypeAnimation/>
                 

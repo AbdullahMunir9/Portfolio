@@ -1,5 +1,4 @@
 import '../css/App.css';
-import '../css/NavBar_Footer.css';
 import '../css/Home.css';
 import '../css/About.css';
 import '../css/portfolioshowcase.css';

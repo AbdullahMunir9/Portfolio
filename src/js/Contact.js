@@ -3,11 +3,11 @@ import '../css/contact.css';
 import Animation2 from './spline-Animation2'
 import { Send } from "lucide-react";
 import { Linkedin, Github, Facebook, Instagram } from 'lucide-react';
-  
+import {Element } from 'react-scroll';
 
 function Contact(params) {
     return(
-        <>
+        <Element name="Contact">
             <div className='Title-Container'>
                 <span className='Title'>Get in Touch</span>
                 <p>I'm always here to chat, and I'm happy to help with anything you need.</p>
@@ -42,7 +42,7 @@ function Contact(params) {
                 </SpotlightCard>
                 <Animation2/>
             </div>
-        </>
+        </Element>
     )
 }
 export default Contact;

@@ -13,7 +13,7 @@
 }
 
 .Title-Text {
-    font-size: 85px;
+    font-size: 70px;
     font-weight: bold;
     background: linear-gradient(to right, #A855F7, #3B82F6);
     -webkit-background-clip: text;
@@ -22,7 +22,7 @@
     -webkit-text-fill-color: transparent;
 }
 span{
-    font-size: 60px;
+    font-size: 55px;
 }
 .social-links{
     display: flex;

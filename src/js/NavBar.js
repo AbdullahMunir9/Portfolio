@@ -1,5 +1,7 @@
 import { UserPen } from 'lucide-react';
 import React from 'react';
+import '../css/NavBar_Footer.css';
+import { Link} from 'react-scroll';
 
 function toggle(event) {
     if (event.target.classList.contains('bi-sun-fill')) {
@@ -21,33 +23,12 @@ function toggle(event) {
 // Bellow is the Main Component of NavBar
 function NavBar(){
     const [selectedIndex,setSelectedIndex] = React.useState(0)
-    const buttons = ["Home","About","Projects","Contact"]
 
     function scroll(index) {
-        if (index === 0) {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        }
-        else if(index === 1){
-            window.scrollTo({
-                top: 680.1111450195312,
-                behavior: 'smooth'
-            });
-        }
-        else if(index === 2){
-            window.scrollTo({
-                top: 1844.444580078125,
-                behavior: 'smooth'
-            });
-        }
-        else{
-            window.scrollTo({
-                top: 2834.81494140625,
-                behavior: 'smooth'
-            });
-        }
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     }
 
     const navBarRef = React.useRef(null);
@@ -76,22 +57,47 @@ function NavBar(){
                     size={33} strokeWidth={1.5} 
                 />
                 <div className="NavBar-ListItems-container">
-                    {
-                        buttons.map((data,index)=>{
-                            return (
-                                <button 
-                                    onClick={()=>{
-                                        scroll(index);
-                                        setSelectedIndex(index)
-                                    }} 
-                                    className={`${data} ${selectedIndex === index ? 'style-text' : ''}`}
-                                    key={index}
-                                >
-                                    <li>{data}</li>
-                                </button>
-                            )
-                        })
-                    }
+                    
+                        <button 
+                            onClick={()=>{setSelectedIndex(0)}} 
+                            className={`Home ${selectedIndex === 0 ? 'style-text' : ''}`}
+                            key={0}
+                        >
+                            <Link to="Home" smooth={true} duration={1000} offset={-100}>
+                                <li>Home</li>
+                            </Link>
+                        </button>
+                        
+                        <button 
+                            onClick={()=>{setSelectedIndex(1)}} 
+                            className={`About ${selectedIndex === 1 ? 'style-text' : ''}`}
+                            key={1}
+                        >
+                            <Link to="About" smooth={true} duration={1000} offset={-75}>
+                                <li>About</li>
+                            </Link>
+                        </button>
+                    
+                        <button 
+                            onClick={()=>{setSelectedIndex(2)}} 
+                            className={`Projects ${selectedIndex === 2 ? 'style-text' : ''}`}
+                            key={2}
+                        >
+                            <Link to="Projects" smooth={true} duration={1000} offset={-20}>
+                                <li>Projects</li>
+                            </Link>
+                        </button>
+
+                        <button 
+                            onClick={()=>{setSelectedIndex(3)}} 
+                            className={`Contact ${selectedIndex === 3 ? 'style-text' : ''}`}
+                            key={3}
+                        >
+                            <Link to="Contact" smooth={true} duration={1000} offset={-80}>
+                                <li>Contact</li>
+                            </Link>
+                        </button>
+
                 </div>
                 <div className='darkmode'>
                     <i onClick={toggle} className="bi bi-moon-fill"></i>

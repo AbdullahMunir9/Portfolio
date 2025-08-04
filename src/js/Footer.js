@@ -1,3 +1,4 @@
+import '../css/NavBar_Footer.css';
 function Footer() {
     return(
         <footer>
