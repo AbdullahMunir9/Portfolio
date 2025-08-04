@@ -58,43 +58,47 @@ function NavBar(){
                 />
                 <div className="NavBar-ListItems-container">
                     
-                        <button 
-                            onClick={()=>{setSelectedIndex(0)}} 
-                            className={`Home ${selectedIndex === 0 ? 'style-text' : ''}`}
-                            key={0}
-                        >
+                        <button key={0}>
                             <Link to="Home" smooth={true} duration={1000} offset={-100}>
-                                <li>Home</li>
+                                <li 
+                                    className={`Home ${selectedIndex === 0 ? 'style-text' : ''}`}
+                                    onClick={()=>{setSelectedIndex(0)}} 
+                                >
+                                    Home
+                                </li>
                             </Link>
                         </button>
                         
-                        <button 
-                            onClick={()=>{setSelectedIndex(1)}} 
-                            className={`About ${selectedIndex === 1 ? 'style-text' : ''}`}
-                            key={1}
-                        >
+                        <button key={1}>
                             <Link to="About" smooth={true} duration={1000} offset={-75}>
-                                <li>About</li>
+                                <li 
+                                    className={`About ${selectedIndex === 1 ? 'style-text' : ''}`}
+                                    onClick={()=>{setSelectedIndex(1)}}
+                                >
+                                    About
+                                </li>
                             </Link>
                         </button>
                     
-                        <button 
-                            onClick={()=>{setSelectedIndex(2)}} 
-                            className={`Projects ${selectedIndex === 2 ? 'style-text' : ''}`}
-                            key={2}
-                        >
+                        <button key={2}>
                             <Link to="Projects" smooth={true} duration={1000} offset={-20}>
-                                <li>Projects</li>
+                                <li 
+                                    className={`Projects ${selectedIndex === 2 ? 'style-text' : ''}`}
+                                    onClick={()=>{setSelectedIndex(2)}}
+                                >
+                                    Projects
+                                </li>
                             </Link>
                         </button>
 
-                        <button 
-                            onClick={()=>{setSelectedIndex(3)}} 
-                            className={`Contact ${selectedIndex === 3 ? 'style-text' : ''}`}
-                            key={3}
-                        >
+                        <button key={3}>
                             <Link to="Contact" smooth={true} duration={1000} offset={-80}>
-                                <li>Contact</li>
+                                <li 
+                                    className={`Contact ${selectedIndex === 3 ? 'style-text' : ''}`}
+                                    onClick={()=>{setSelectedIndex(3)}}
+                                >
+                                    Contact
+                                </li>
                             </Link>
                         </button>
 
