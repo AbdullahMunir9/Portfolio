@@ -8,10 +8,12 @@ import About from'./About'
 import Footer from'./Footer'
 import Contact from'./Contact'
 import PortfolioShowcase from './PortfolioShowcase-Container'
+import SplashCursor from '../blocks/Animations/SplashCursor/SplashCursor'
 
 function App() {
   return (
     <>
+      <SplashCursor />
       <NavBar/>
       <div className="Main-Body-Container">
         <Home/>
