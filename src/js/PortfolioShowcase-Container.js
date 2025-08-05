@@ -34,7 +34,7 @@ function PortfolioShowcase() {
             </div>
 
 
-            <div className='Bellow-TopBar'>
+            <div className='Bellow-TopBar' style={selectedIndex === 0 ? { width: '100%' } : {}}>
                 {selectedIndex === 0 && <Project/>}
                 {selectedIndex === 1 && <TechStack/>}
                 {selectedIndex === 1 && 
