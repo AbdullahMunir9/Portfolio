@@ -69,7 +69,7 @@ img{
 }
 .Button-Container{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-top: 35px;
 }
 .Button-Container a{
@@ -83,6 +83,7 @@ img{
 }
 .Projects{
     cursor: pointer;
+    width: 154px;
 }
 
 

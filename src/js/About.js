@@ -1,8 +1,7 @@
 import { Code, Award, Globe } from "lucide-react";
 import profilePic from '../assets/profile-pic.png'
 import { FileDown } from 'lucide-react';
-import { Code2 } from "lucide-react";
-import { Element } from 'react-scroll';
+import { Link,Element } from 'react-scroll';
 
 
 function About() {
@@ -68,9 +67,10 @@ function About() {
                             <FileDown className="icon" size={20} style={{ marginRight: '8px' }} />
                             Download CV
                         </a>
-                        <button className="glowing-button Projects" onClick={scroll}>   
-                            <Code2 className="icon" size={20} style={{ marginRight: '8px' }} />
-                            View Projects
+                        <button className="glowing-button Projects" onClick={scroll}>
+                            <Link to="Projects" smooth={true} duration={1000} offset={-50}>
+                                View Projects
+                            </Link>   
                         </button>
                     </div>
                 </div>

@@ -3,7 +3,7 @@ import myAnimation from "../assets/about-animation.json";
 import TypeAnimation from './type-animation';
 import { ExternalLink, Mail } from 'lucide-react';
 import { Github, Linkedin, Instagram } from 'lucide-react';
-import { Element } from 'react-scroll';
+import { Link,Element } from 'react-scroll';
 
 function Home(params) {
     const languages = ["Javascript","React","ExpressJs","Node.Js","Tailwind"]
@@ -31,8 +31,16 @@ function Home(params) {
                     </>
                 ))}
                 <div className="contact-Container">
-                    <button className="glowing-button bg-black">Projects <ExternalLink className="icons" size={16} /></button>
-                    <button className="glowing-button bg-black">Contact <Mail className="icons" size={16} /></button>
+                    <button className="glowing-button bg-black">
+                        <Link to="Projects" smooth={true} duration={1000} offset={-50}>
+                            Projects <ExternalLink className="icons" size={16} />
+                        </Link> 
+                    </button>
+                    <button className="glowing-button bg-black">
+                        <Link to="Contact" smooth={true} duration={1000} offset={-80}>
+                            Contact <Mail className="icons" size={16} />
+                        </Link>
+                    </button>
                 </div>
 
                 <div className="social-links">

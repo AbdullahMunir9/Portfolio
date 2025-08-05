@@ -81,7 +81,7 @@ function NavBar(){
                         </button>
                     
                         <button key={2}>
-                            <Link to="Projects" smooth={true} duration={1000} offset={-20}>
+                            <Link to="Projects" smooth={true} duration={1000} offset={-50}>
                                 <li 
                                     className={`Projects ${selectedIndex === 2 ? 'style-text' : ''}`}
                                     onClick={()=>{setSelectedIndex(2)}}
