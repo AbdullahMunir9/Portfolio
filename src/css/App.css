@@ -14,3 +14,28 @@ body {
   margin-left: 30px;
   margin-right: 30px;
 }
+html, body {
+  height: 100%;
+  scroll-behavior: auto; /* disable default smooth scroll */
+}
+
+body {
+  overscroll-behavior: none;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #001f3f;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #00bfff;
+  border-radius: 10px;
+  border: 2px solid #001f3f;
+}
+
+
+

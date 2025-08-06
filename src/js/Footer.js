@@ -1,4 +1,6 @@
 import '../css/NavBar_Footer.css';
+import React from 'react';
+
 function Footer() {
     return(
         <footer>
@@ -6,5 +8,4 @@ function Footer() {
         </footer>
     )
 }
-
-export default Footer;
+export default React.memo(Footer);
